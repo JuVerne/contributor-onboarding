@@ -67,9 +67,12 @@ def element_wise_multiply(a: np.array, b: np.array) -> np.array:
 
     Returns:
     np.array
-    '''
 
-    # let's hope that both vectors have the same shape
+    Raises:
+    ValueError: if the shapes of the input arrays don't match
+    '''
+    if a.shape != b.shape:
+        raise ValueError(f"Arrays must have the same shape. Got shapes {a.shape} and {b.shape}")
 
     return np.multiply(a, b)
 
