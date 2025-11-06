@@ -94,14 +94,9 @@ def return_hexadecimal(a: int) -> str:
 
 def return_random_number() -> int:
     '''
-    ...
-
-    Args:
-    a: float
-    b: float
+    Returns a random integer between 0 and 99.
 
     Returns:
-    float
+        int: A random integer in the range [0, 100).
     '''
-
     return np.random.randint(0, 100)
