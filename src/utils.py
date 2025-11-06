@@ -89,7 +89,7 @@ def return_hexadecimal(a: int) -> str:
     return hex(a)
 
 
-def return_random_number() -> str:
+def return_random_number() -> float:
     '''
     I have updated the datatype with the right data output type
     ...
