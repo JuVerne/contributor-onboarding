@@ -89,17 +89,11 @@ def return_hexadecimal(a: int) -> str:
     return hex(a)
 
 
-def return_random_number() -> float:
+def return_random_number() -> int:
     '''
-    I have updated the datatype with the right data output type
-    ...
-
-    Args:
-    a: float
-    b: float
+    Returns a random integer between 0 and 99.
 
     Returns:
-    float
+        int: A random integer in the range [0, 100).
     '''
-
     return np.random.randint(0, 100)
