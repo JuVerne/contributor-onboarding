@@ -4,18 +4,21 @@ import numpy as np
 # TODO: make all functions work with strings as well
 # TODO: add a new cool calculator function
 
-def sum(a: int, b: int) -> int:
+def sum(a: NumberOrString, b: NumberOrString) -> NumberOrString:
     '''
-    This function returns the sum of two numbers
+    Returns the sum (or concatenation) of two inputs.
 
-    Args:
-    a: float the first number
-    b: float the second number
-
-    Returns:
-    float the sum of a and b
+    Works with:
+    - numbers (int, float)
+    - strings (concatenation)
+    - numpy arrays (element-wise addition)
     '''
-    return a + b
+    if isinstance(a, str) and isinstance(b, str):
+        return a + b
+    elif isinstance(a, np.ndarray) and isinstance(b, np.ndarray):
+        return np.add(a, b)
+    else:
+        return a + b
 
 def multiply(a, b) -> float:
     '''
